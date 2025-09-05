@@ -1,10 +1,9 @@
-
 const Homepage = () => {
   return (
     <div className="container">
-      <h1>homepage</h1>
+      <h1>BENVENUTI NEL MIO FINTO NEGOZIO </h1>
     </div>
-  )
-}
+  );
+};
 
-export default Homepage
+export default Homepage;
