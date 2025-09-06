@@ -19,21 +19,22 @@ const Products = () => {
           <h2 className="text-success">prodotti </h2>
         </div>
         {products.map((product) => {
+          const {id, description, image, title, category, price} = product
           return (
-            <div className="col-4" key={product.id}>
+            <div className="col-4" key={id}>
               <div className="card p-3 h-100 bg-body-secondary position-relative" style={{ width: "18rem" }}>
                 <div className="overlay position-absolute ">
                   <h3 className="text-center">Description</h3>
-                <p>{product.description}</p>
+                <p>{description}</p>
               </div>
-                <img src={product.image} className="card-img-top" alt="" />
+                <img src={image} className="card-img-top" alt="" />
                 <div className="card-body">
-                  <h5 className="card-title">{product.title}</h5>
+                  <h5 className="card-title">{title}</h5>
                   <p className="card-text">
-                    <span className="text-danger fw-bold">category:</span> {product.category} 
+                    <span className="text-danger fw-bold">category:</span> {category} 
                   </p>
-                  <p><span className="text-success fw-bold">price:</span> {product.price}$</p>
-                  {/* <p>{product.description}</p> */}
+                  <p><span className="text-success fw-bold">price:</span> {price}$</p>
+                  
                 </div>
               </div>
             </div>
