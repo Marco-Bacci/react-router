@@ -21,7 +21,11 @@ const Products = () => {
         {products.map((product) => {
           return (
             <div className="col-4" key={product.id}>
-              <div className="card p-3 h-100 bg-body-secondary" style={{ width: "18rem" }}>
+              <div className="card p-3 h-100 bg-body-secondary position-relative" style={{ width: "18rem" }}>
+                <div className="overlay position-absolute ">
+                  <h3 className="text-center">Description</h3>
+                <p>{product.description}</p>
+              </div>
                 <img src={product.image} className="card-img-top" alt="" />
                 <div className="card-body">
                   <h5 className="card-title">{product.title}</h5>
