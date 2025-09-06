@@ -14,21 +14,22 @@ const Products = () => {
 
   return (
     <div className="container">
-      <div className="row">
+      <div className="row g-3">
         <div className="col-12">
-          <h1>prodotti </h1>
+          <h2 className="text-success">prodotti </h2>
         </div>
         {products.map((product) => {
           return (
-            <div className="col-3">
-              <div className="card" style={{ width: "18rem" }}>
+            <div className="col-4" key={product.id}>
+              <div className="card p-3 h-100" style={{ width: "18rem" }}>
                 <img src={product.image} className="card-img-top" alt="" />
                 <div className="card-body">
                   <h5 className="card-title">{product.title}</h5>
                   <p className="card-text">
-                    {products.category} {product.price}
+                    category: {product.category} 
                   </p>
-                  <p>{product.description}</p>
+                  <p>price: {product.price}$</p>
+                  {/* <p>{product.description}</p> */}
                 </div>
               </div>
             </div>

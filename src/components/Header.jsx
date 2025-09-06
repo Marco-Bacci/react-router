@@ -5,8 +5,8 @@ const Header = () => {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <div className="d-flex align-items-center">
-              <h2 className="me-3">Fake Shop</h2>
+            <div className="d-flex align-items-center justify-content-between">
+              <h1 className="me-3">Fake Shop</h1>
               <ul className="list-unstyled d-flex">
                 <li className="me-2">
                   <NavLink to="/"> Home </NavLink>
