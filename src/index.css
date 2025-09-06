@@ -8,3 +8,11 @@ header a{
   color: green;
   font-weight: 700;
 }
+
+li a:hover{
+  color: black;
+}
+
+li a.active{
+  color: black
+}
