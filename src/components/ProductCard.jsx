@@ -14,9 +14,10 @@ const ProductCard = ({info}) => {
         </div> */}
         <img src={image} className="card-img-top" alt="" />
         <div className="card-body">
-          <h5 className="card-title">{title}</h5>
-          
+          <h5 className="card-title text-center">{title}</h5>
+          <div className="d-flex justify-content-center">
           <Link className="btn btn-primary mt-2" to={`/products/${id}`}> Dettagli Prodotto </Link>
+          </div>
         </div>
       </div>
     </div>
