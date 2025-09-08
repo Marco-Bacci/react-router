@@ -7,7 +7,6 @@ const Products = () => {
   const fetchProducts = () => {
     axios.get("https://fakestoreapi.com/products").then((response) => {
       setProducts(response.data);
-      console.log(response.data);
     });
   };
 
