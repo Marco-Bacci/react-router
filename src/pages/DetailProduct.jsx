@@ -16,6 +16,11 @@ const DetailProduct = () => {
       <div className="row">
         <div className="col-12">
           <h3>{product.title}</h3>
+          <img src={product.image} alt="image" />
+          <p>Category: {product.category}</p>
+          <p>Price: {product.price}$</p>
+          <p>{product.description}</p>
+          
         </div>
       </div>
     </div>
@@ -23,3 +28,5 @@ const DetailProduct = () => {
 };
 
 export default DetailProduct;
+
+
