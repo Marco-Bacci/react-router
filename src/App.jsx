@@ -2,9 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DefaultLayout from "./layouts/DefaultLayout";
 import Homepage from "./pages/Homepage";
 import About from "./pages/About";
-import Products from "./pages/Products"
+import Products from "./pages/Products";
 import DetailProduct from "./pages/DetailProduct";
-
 
 function App() {
   return (
@@ -13,9 +12,11 @@ function App() {
         <Routes>
           <Route element={<DefaultLayout />}>
             <Route path="/" element={<Homepage />}></Route>
-            <Route path="about" element={<About/>}></Route>
-            <Route path="products" element={<Products/>}></Route>
-            <Route path="/products/:id" element={<DetailProduct/>} ></Route>
+            <Route path="about" element={<About />}></Route>
+            <Route path="/products">
+              <Route path="" element={<Products />}></Route>
+              <Route path=":id" element={<DetailProduct />}></Route>
+            </Route>
           </Route>
         </Routes>
       </BrowserRouter>
